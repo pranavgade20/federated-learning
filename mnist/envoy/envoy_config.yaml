@@ -28,6 +28,7 @@ params:
 shard_descriptor:
   template: shard_descriptor.LocalShardDescriptor
   params:
+    install_requirements: False
     data_path: data/data.csv
-    sample_shape: [2]
-    target_shape: [1]
+    sample_shape: [28,28]
+    target_shape: [10]
