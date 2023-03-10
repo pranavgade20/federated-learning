@@ -5,7 +5,7 @@ aggregator:
     init_state_path: save/init.pbuf
     last_state_path: save/last.pbuf
     rounds_to_train: 3
-    write_logs: false
+    write_logs: true
   template: openfl.component.Aggregator
 api_layer:
   required_plugin_components:
@@ -33,6 +33,9 @@ collaborator:
     device_assignment_policy: CPU_ONLY
     opt_treatment: CONTINUE_GLOBAL
   template: openfl.component.Collaborator
+compression_pipeline:
+  settings: {}
+  template: openfl.pipelines.NoCompressionPipeline
 data_loader:
   settings: {}
   template: openfl.federated.DataLoader
